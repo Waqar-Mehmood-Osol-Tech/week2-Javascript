@@ -8,6 +8,7 @@ const remaining = document.querySelector('.lastResult');
 const lowOrHi = document.querySelector('.lowOrHi');
 const startOver = document.querySelector('.resultParas');
 
+// here we create a new element p to display the 
 const p = document.createElement('p');
 
 // Store the values which user enteres while guessing the num
