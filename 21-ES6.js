@@ -126,6 +126,82 @@ let str1 = `The Sum of a: ${a} and b: ${b} is qual to ${a + b}`;
 
 // Destructuring
 
+// Object Destructuring
+const person = {
+    firstName: "Waqar",
+    lastName: "Mehmood",
+    age: 25,
+    occupation: "Software Engineer",
+}
+
+// let { firstName, lastName } = person;
+
+// console.log(firstName, " " , lastName);
+
+
+// The Order of Properties doesn't matter
+// let { lastName, firstName } = person;
+
+
+// For potentially missing object values we can set the default
+// Destructuring
+let { firstName, lastName, country = "PK" } = person;
+console.log(firstName, " ", lastName, " ", country);
+
+// Object Property alias
+let { lastName: name } = person;
+console.log(name);
+
+
+//  Destructuring in the Strings
+// Destructuring after converting strings to an array
+let str3 = "Waqar";
+
+let [s1, s2, s3, s4, s5] = [...str3]
+
+console.log(s1);
+console.log(s2);
+console.log(s3);
+console.log(s4);
+console.log(s5);
+
+//  Destructuring using Array.from
+const str4 = "world";
+const [w, o, r, l, d] = Array.from(str4);
+
+console.log(w); // "w"
+console.log(o); // "o"
+console.log(r); // "r"
+console.log(l); // "l"
+console.log(d); // "d"
+
+// using Rest operator
+const [s11, s12, ...rest] = "Waqar";
+console.log(s11); // "W"
+console.log(s12); // "a"
+console.log(rest); // "qar"
+
+// Array Destructuring
+// Create-an-Array
+const fruits = ["Bananas", "Oranges", "Apples", "Mangos"];
+
+// Destructuring
+let [fruit1, fruit2] = fruits; 
+
+console.log(fruit1, fruit2);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
