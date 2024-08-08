@@ -184,11 +184,20 @@ console.log(rest); // "qar"
 // Array Destructuring
 // Create-an-Array
 const fruits = ["Bananas", "Oranges", "Apples", "Mangos"];
-
 // Destructuring
-let [fruit1, fruit2] = fruits; 
-
+// let [fruit1, fruit2] = fruits; 
 console.log(fruit1, fruit2);
+
+// Destructuring with index
+let [fruit1, fruit2, fruit3, fruit4] = fruits;
+console.log(fruit1, fruit2, fruit3, fruit4);
+
+
+
+
+
+
+
 
 
 

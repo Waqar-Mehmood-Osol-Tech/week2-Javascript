@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="parent" style="display: flex;  align-items: center; justify-content: center; flex-direction: column;">
+        <h1>Waqar Mahmood Rana</h1>
+        <div class="btn" style="display: flex; flex-direction: row;  gap: 10px;">
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+        </div>
+    </div>
+</body>
+<script>
+    // generate a random color hex code 
+    const randomColor = function () {
+        const hex = '0123456789ABCDEF'
+        let color = '#'
+
+        for (let index = 0; index < 6; index++) {
+            color += hex[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    let intervalId;
+
+    const changeBG = function () {
+        document.querySelector('body').style.backgroundColor = randomColor();
+    }
+
+    const startChangingColor = function () {
+        if (!intervalId) {
+            intervalId = setInterval(changeBG, 1000);
+        }
+    }
+
+    const stopChangingColor = function () {
+        clearInterval(intervalId);
+        intervalId = null;
+    }
+
+    document.querySelector('#start').addEventListener('click', startChangingColor)
+    document.querySelector('#stop').addEventListener('click', stopChangingColor)
+
+
+</script>
+
+</html>
